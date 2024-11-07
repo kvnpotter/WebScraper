@@ -4,4 +4,4 @@ Help for WebScraperPackage
 
 # Imports
 
-from WebScraperPackage import utils
+from .utils import ScrapingFunctions, SaveFunction
