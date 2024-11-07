@@ -25,5 +25,5 @@ def test_save():
               text = file.read()
               assert str(datetime.today().date()) == text[:10]
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     pytest.main(['-v'])
