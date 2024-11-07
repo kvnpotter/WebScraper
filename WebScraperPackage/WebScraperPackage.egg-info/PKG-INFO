@@ -1,9 +1,0 @@
-Metadata-Version: 2.1
-Name: WebScraperPackage
-Version: 0.1.0
-Summary: A package to scrape some data and save it
-Author: Kevin Potter
-Requires-Dist: requests
-Requires-Dist: beautifulsoup4
-Requires-Dist: pytest
-Requires-Dist: ipykernel
