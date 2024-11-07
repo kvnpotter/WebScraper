@@ -1,0 +1,8 @@
+name: wikipedia_scraper_env
+channels:
+  - defaults
+dependencies:
+  - ipykernel
+  - requests
+  - beautifulsoup4
+prefix: C:\Users\kvnpo\anaconda3\envs\wikipedia_scraper_env
