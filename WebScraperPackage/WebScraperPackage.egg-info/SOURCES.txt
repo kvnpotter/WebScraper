@@ -1,0 +1,12 @@
+setup.py
+WebScraperPackage/__init__.py
+WebScraperPackage/main.py
+WebScraperPackage.egg-info/PKG-INFO
+WebScraperPackage.egg-info/SOURCES.txt
+WebScraperPackage.egg-info/dependency_links.txt
+WebScraperPackage.egg-info/requires.txt
+WebScraperPackage.egg-info/top_level.txt
+WebScraperPackage/utils/SaveFunction.py
+WebScraperPackage/utils/ScrapingFunctions.py
+WebScraperPackage/utils/__init__.py
+WebScraperPackage/utils/test_ScrapingFunctions.py

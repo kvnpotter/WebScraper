@@ -1,7 +1,7 @@
 # Imports
 
-from ScrapingFunctions import get_cookie, get_first_paragraph, get_leaders
-from SaveFunction import save
+from utils.ScrapingFunctions import get_cookie, get_first_paragraph, get_leaders
+from utils.SaveFunction import save
 
 # Main program
 
