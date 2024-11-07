@@ -27,7 +27,7 @@ def get_first_paragraph(wikipedia_url: str, leader_birth_year: str, session: Ses
     '''
     print(wikipedia_url)
     leader_wiki = session.get(wikipedia_url).content
-    soup = BeautifulSoup(leader_wiki, "html")
+    soup = BeautifulSoup(leader_wiki, features="html.parser")
     paragraphs = soup.find_all("p")
     regex_reference = r'\[[0-9a-z]{1,2}\]'
     regex_phonetic_french = r'\(.*?Écouter.?\)'
