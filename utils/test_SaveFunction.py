@@ -3,8 +3,11 @@ from SaveFunction import save
 
 # Testing functions
 
-def test_save():
-    save({'Empty':'Dict'})
+@pytest.fixture
+def setup_file():
+       save({'Empty':'Dict'})
+
+def test_save(setup_file):
     assert os.path.exists('./results/leaders.json')
     with open('./results/leaders.json', 'r') as file:
               text = file.read()
