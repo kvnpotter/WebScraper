@@ -5,10 +5,12 @@ from utils.SaveFunction import save
 
 # Main program
 
-def main() :
+
+def main():
     leader_dict = get_leaders()
     save(leader_dict)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     print("Running program, getting leaders, scraping Wikipedia.")
     main()
