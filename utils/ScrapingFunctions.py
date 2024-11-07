@@ -40,7 +40,7 @@ def get_first_paragraph(wikipedia_url: str, leader_birth_year: str, session: Ses
             second_regex = re.sub(regex_phonetic_french, '', first_regex)
             third_regex = re.sub(regex_phonetic_dutch, '', second_regex)
             fourth_regex = re.sub(regex_phonetic_english, '(', third_regex)
-            return fourth_regex
+    return fourth_regex
 
 def get_leaders() -> dict[str, list[dict[str, str]]]:
     '''
