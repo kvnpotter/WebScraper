@@ -1,4 +1,9 @@
+import re
+from bs4 import BeautifulSoup
+import requests
+from requests import Session
 import pytest
+from ScrapingFunctions import get_cookie, get_first_paragraph, get_leaders
 
 # Testing functions
 
