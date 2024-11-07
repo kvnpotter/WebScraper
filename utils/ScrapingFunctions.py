@@ -4,6 +4,7 @@ import re
 from bs4 import BeautifulSoup
 import requests
 from requests import Session
+import pytest
 
 # Functions
 
@@ -75,3 +76,8 @@ def get_leaders() -> dict[str, list[dict[str, str]]]:
 
           
     return leaders_per_country
+
+# Running tests if main 
+
+if __name__ == "__main__":
+    pytest.main(['./test_ScrapingFunctions.py', '-v'])
