@@ -5,4 +5,5 @@ dependencies:
   - ipykernel
   - requests
   - beautifulsoup4
+  - pytest
 prefix: C:\Users\kvnpo\anaconda3\envs\wikipedia_scraper_env
