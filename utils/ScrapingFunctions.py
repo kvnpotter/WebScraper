@@ -4,6 +4,7 @@ import re
 from bs4 import BeautifulSoup
 import requests
 from requests import Session
+import pytest
 
 # Functions
 
@@ -75,3 +76,20 @@ def get_leaders() -> dict[str, list[dict[str, str]]]:
 
           
     return leaders_per_country
+
+# Testing functions
+
+@pytest.fixture
+def init_session():
+    return requests.Session()
+
+def test_get_first_paragraph(init_session):
+    assert get_first_paragraph('https://en.wikipedia.org/wiki/Bill_Clinton', '1946', init_session) == 'William Jefferson  Clinton (né Blythe; born August 19, 1946) is an American lawyer and politician  who served as the 42nd president of the United States from 1993 to 2001. A member of the Democratic Party, he previously served as governor of Arkansas from 1979 to 1981 and again from 1983 to 1992. Clinton, whose policies reflected a centrist "Third Way" political philosophy, became known as a New Democrat.'
+    assert get_first_paragraph('https://nl.wikipedia.org/wiki/Henri_Carton_de_Wiart', '1869', init_session) == 'Henri Victor Marie Ghislain graaf Carton de Wiart (Brussel, 31 januari 1869 – Ukkel, 6 mei 1951) (ook als "Henry" vermeld) was een Belgische politicus. Hij was Eerste Minister van 1920 tot 1921.'
+    assert get_first_paragraph('https://ar.wikipedia.org/wiki/%D9%85%D8%AD%D9%85%D8%AF_%D8%A7%D9%84%D8%AE%D8%A7%D9%85%D8%B3_%D8%A8%D9%86_%D9%8A%D9%88%D8%B3%D9%81', '1909', init_session ) == 'محمد الخامس بن يوسف بن الحسن بن محمد بن عبد الرحمن بن هشام بن محمد بن عبد الله بن إسماعيل بن إسماعيل بن الشريف بن علي العلوي وُلد (1327 هـ / 10 أغسطس 1909م بالقصر السلطاني بفاس)  وتوفي (1381 هـ / 26 فبراير 1961م بالرباط) خَلَف والده السلطان مولاي يوسف الذي توفي بُكرة يوم الخميس 22 جمادى الأولى سنة 1346 هـ موافق 17 نوفمبر سنة 1927م فبويع ابنه سيدي محمد سلطانا للمغرب في اليوم الموالي بعد صلاة الجمعة 23 جمادى الأولى سنة 1346 هـ موافق 18 نوفمبر سنة 1927م في القصر السلطاني بفاس  ولم يزل سلطان المغرب إلى سنة 1957م، قضى منها المنفى بين (1953-1955)، ثم اتخذ لقب الملك سنة 1957م ولم يزل ملكا إلى وفاته سنة 1961م، ساند السلطان محمد الخامس نضالات الحركة الوطنية المغربية المطالبة بتحقيق الاستقلال، الشيء الذي دفعه إلى الاصطدام بسلطات الحماية. وكانت النتيجة قيام سلطات الحماية بنفيه إلى مدغشقر. وعلى إثر ذلك اندلعت مظاهرات مطالبة بعودته إلى وطنه. وأمام اشتداد حدة المظاهرات، قبلت السلطات الفرنسية بإرجاع السلطان إلى عرشه يوم 16 نوفمبر 1955. وبعد بضعة شهور تم إعلان استقلال المغرب. كان الملك محمد الخامس يكنى: أبا عبد الله.'
+    assert get_first_paragraph('https://fr.wikipedia.org/wiki/Nicolas_Sarkozy', '1955', init_session) == "Nicolas Sarközy de Nagy-Bocsa, dit Nicolas Sarkozy , né le 28 janvier 1955 à Paris (France), est un homme d'État français. Il est président de la République française du 16 mai 2007 au 15 mai 2012."
+
+# Running tests if main 
+
+if __name__ == "__main__":
+    pytest.main(['-v'])
