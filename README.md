@@ -20,6 +20,7 @@ The code and jupyter notebook contained within this repository result from a sec
 
 1. Jupyter notebook - step by step guide to the project
 2. Python scripts for the main function, and functions to obtain, clean and store the data
+3. Package version of the software, wheel and source distributions
 
 # Environment setup
 
@@ -47,6 +48,23 @@ Create a local copy of the repository by cloning and navigate to the directory u
 
 ```shell
 python main.py
+```
+
+## Alternative
+
+Go to the WebScraperPackage/WebScraperPackage directory, run following command in CLI to intall the package
+
+```shell
+pip install .
+```
+Run following commands to run the program
+
+```shell
+python 
+```
+```python
+from main import main
+main()
 ```
 
 # Timeline
