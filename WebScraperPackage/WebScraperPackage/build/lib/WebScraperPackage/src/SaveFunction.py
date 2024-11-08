@@ -10,6 +10,7 @@ def save(leaders_per_country: dict) -> None:
     Simple function to save passed dictionary to JSON file.
     '''
     now = str(datetime.today())
-    filename = input("Enter relative path/filename.json to create the file")
+    leaders_per_country['DateTimeNow'] = now
+    filename = input("Enter filename.json to create the file : ")
     with open(filename, "w") as output:
-        output.write(now + "/n" + json.dumps(leaders_per_country))
+        output.write(json.dumps(leaders_per_country))
