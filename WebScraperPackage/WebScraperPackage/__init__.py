@@ -1,5 +1,0 @@
-"""
-Help for WebScraperPackage
-"""
-
-# Imports
