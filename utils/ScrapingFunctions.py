@@ -45,6 +45,7 @@ def get_first_paragraph(
             second_regex = re.sub(regex_phonetic_french, "", first_regex)
             third_regex = re.sub(regex_phonetic_dutch, "", second_regex)
             fourth_regex = re.sub(regex_phonetic_english, "(", third_regex)
+            break
     return fourth_regex
 
 
