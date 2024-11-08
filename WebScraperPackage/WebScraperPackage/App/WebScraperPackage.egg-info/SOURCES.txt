@@ -1,0 +1,13 @@
+LICENSE
+setup.py
+app/WebScraperPackage/__init__.py
+app/WebScraperPackage.egg-info/PKG-INFO
+app/WebScraperPackage.egg-info/SOURCES.txt
+app/WebScraperPackage.egg-info/dependency_links.txt
+app/WebScraperPackage.egg-info/requires.txt
+app/WebScraperPackage.egg-info/top_level.txt
+app/WebScraperPackage/src/SaveFunction.py
+app/WebScraperPackage/src/ScrapingFunctions.py
+app/WebScraperPackage/src/__init__.py
+app/WebScraperPackage/test/__init__.py
+app/WebScraperPackage/test/test_ScrapingFunctions.py
